@@ -1,0 +1,28 @@
+<h1>Where are you staying? What are you doing here?</h1>
+<form method="post" action="/places">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <div class= "mb-2">
+    <label>Places you want to or need to go: </label>
+    <input type="text" name="place[name]">
+  </div>
+  <div class= "mb-2">
+    <label>Address (where you are staying): </label>
+    <input type="text" name="place[address]">
+  </div>
+  <div class= "mb-2">
+    <label> describe what you want or need to do: </label>
+    <input type="text" name="place[description]">
+  <div class= "mb-2">
+    <label>Trip ID: </label>
+    <Input type="text" name="trip[id]">
+  </div>
+  <div class="mb-2">
+    <label>Image of the place you want to go: </label>
+    <input type="text" name="places[image]" id="image-input">
+    <img src="" id="image-preview" style="max-width: 100%;" alt="Image preview">
+  </div>
+    </form>
+  <div class= "mb-2">
+    <input type="submit" class ="btn btn-outline-dark rounded-pill" value="Create place">
+  </div>
+</form>

@@ -1,0 +1,17 @@
+<div class= "container py-5" style="max-width: 540px">  
+  <%= form_with method: "post", url: "/sessions", id: "login-form" do |form| %>
+  <h2>Login</h2>
+
+    <div class= "mb-2">
+      <%= form.email_field :email %>
+      <%= form.label :email %>
+    </div>
+    <div class= "mb-2">
+      <%= form.password_field :password %>
+      <%= form.label :password %>
+    </div>
+    <div>
+      <%= form.submit "Submit", class: "btn btn-outline-dark rounded-pill" %>
+    </div>
+  <% end%>
+</div>

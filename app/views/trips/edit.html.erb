@@ -1,0 +1,28 @@
+<h1>Edit Trip</h1>
+<form method="post" action="/trips/<%= @trip.id %>">
+  <input type="hidden" name="_method" value="patch" autocomplete="off">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label>Trip Number </label>
+    <input type="text" name="trip[user_id]" value="<%= @trip.user_id %>">
+  </div>
+  <div>
+    <label>Title </label>
+    <input type="text" name="trip[title]" value="<%= @trip.title %>">
+  </div>
+  <div>
+    <label>Image </label>
+    <input type="text" name="trip[image]" value="<%= @trip.image %>">
+  </div>
+  <div>
+    <label>Beginning of the trip </label>
+    <input type="text" name="trip[start_time]" value="<%= @trip.start_time %>">
+  </div>
+  <div>
+    <label>End of the trip </label>
+    <input type="text" name="trip[end_time]" value="<%= @trip.end_time %>">
+  </div>
+  <div>
+    <input type="submit" value="Update trip">
+  </div>
+</form>

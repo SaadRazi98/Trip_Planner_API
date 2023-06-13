@@ -1,0 +1,7 @@
+<h1>Places info</h1>
+<h2><%= place.name %></h2>
+<p>Address (where you are staying): <%= place.address %></p>
+<p>Places you want to or need to go: <%= place.name %></p>
+<p> describe what you want or need to do: <%= place.description %></p>
+<p>Picture of where you are going : <%= link_to(image_tag(@place.image, class: "d-block w-75"), "#") %></p>
+<a href="/places">Back to all places</a>

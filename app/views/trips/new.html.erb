@@ -1,0 +1,24 @@
+<!-- Or write out the HTML manually -->
+<h1>New trip</h1>
+<form method="post" action="/trips">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div>
+    <label>title </label>
+    <input type="text" name="trip[title]">
+  </div>
+  <div class= "mb-3">
+    <label>image </label>
+    <Input type="text" name="trip[image]">
+  </div>
+  <div>
+    <label>Beginning of the trip </label>
+    <input type="text" name="trip[start_time]">
+  </div>
+  <div class>
+    <label>Ending of the trip </label>
+    <input type="text" name="trip[end_time]">
+  </div>
+  <div>
+    <input type="submit" value="Create" class="btn btn-outline-dark rounded-pill">
+  </div>
+</form>

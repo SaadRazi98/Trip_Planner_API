@@ -1,0 +1,46 @@
+<!-------------SIGNUP----------------->
+<div class= "container py-5" style="max-width: 540px">
+<h1 style="color:blue">Sign up</h1>
+<%= form_with model: @user do |form| %>
+  <div class= "mb-2">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <% @user.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div class= "mb-2">
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+    <% @user.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div class= "mb-2">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+    <% @user.errors.full_messages_for(:password).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+    <div class= "mb-2">
+    <%= form.label :password_confirmation %>
+    <%= form.password_field :password_confirmation %>
+    <% @user.errors.full_messages_for(:password_confirmation).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div class= "mb-2">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+    <% @user.errors.full_messages_for(:image).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit "Submit", class: "btn btn-outline-dark rounded-pill"  %>
+  </div>
+<% end %>
+</div>
+

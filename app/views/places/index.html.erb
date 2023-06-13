@@ -1,0 +1,14 @@
+<h1>Where are you staying?</h1>
+<% @places.each do |place| %>
+  <h2><%= place.name %></h2>
+  <p>Address (where you are staying): <%= place.address %></p>
+  <p>Places you want to or need to go: <%= place.name %></p>
+  <p> describe what you want or need to do: <%= place.description %></p>
+  <p> Picture of why you are going: <%= place.image %></p>
+  <a href="/places/:id">Open Place</a>
+<% end %>
+
+<a href="/places/:id">New place</a>
+
+<!-- Or write the HTML manually -->
+<a href="/places/new">New place</a>

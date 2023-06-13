@@ -1,0 +1,33 @@
+
+<h3>Trips You Have Planned!</h3>
+<div class="card-deck">
+  <% @trips.each do |trip| %>
+    <div class="card" style="width: 18rem;">
+      <% if trip.image %>
+        <img class="card-img-top" src="<%= trip.image %>" alt="Card image cap">
+      <% else %>
+        <img class="card-img-top" src="<https://via.placeholder.com/300x200.png?text=No+Image>" alt="Card image cap">
+      <% end %>
+      <div class="card-body" >
+        <h5 class="card-title"><%=  %></h5>
+        <p class="card-text"> <%= trip.title%> </p>
+        <p class="card-text">Depart: <%= trip.start_time%></p>
+        <a href="/trips/<%= trip.id %>" class="btn btn-outline-dark rounded-pill">View Trip</a>
+      </div>
+    </div>
+  <% end %>
+
+
+
+
+
+
+
+
+
+<a href="/trips/:title">Open trip</a>
+
+<!-- Or write the HTML manually -->
+<a href="/trips/new">New trips</a>
+
+
